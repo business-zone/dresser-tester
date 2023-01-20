@@ -37,6 +37,8 @@ if __name__ == '__main__':
     driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()))
     driver.get("http://localhost/")
     action_chain = ActionChains(driver)
+    driver.find_element(By.ID, "details-button").click()
+    driver.find_element(By.ID, "proceed-link").click()
 
 #Creating new account
     first = driver.find_element(By.CLASS_NAME, "hidden-sm-down")
