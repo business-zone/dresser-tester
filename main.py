@@ -35,7 +35,7 @@ def add_products(n):
 
 if __name__ == '__main__':
     driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()))
-    driver.get("http://localhost/")
+    driver.get("https://localhost:443")
     action_chain = ActionChains(driver)
     driver.find_element(By.ID, "details-button").click()
     driver.find_element(By.ID, "proceed-link").click()
